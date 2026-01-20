@@ -6,15 +6,7 @@ import { MethodsPanel } from '@/components/MethodsPanel';
 import { InfoPanel } from '@/components/InfoPanel';
 import { EvaluationPanel } from '@/components/EvaluationPanel';
 import { TrendingUp } from 'lucide-react';
-
-const SAMPLE_DATA: DataPoint[] = [
-  { x: 0, y: 1 },
-  { x: 1, y: 2.7 },
-  { x: 2, y: 5.4 },
-  { x: 3, y: 6.8 },
-  { x: 4, y: 8.1 },
-  { x: 5, y: 7.5 },
-];
+import SAMPLE_DATA from '../../interpolation-data.json';
 
 export default function Index() {
   const [dataPoints, setDataPoints] = useState<DataPoint[]>([]);
@@ -101,7 +93,7 @@ export default function Index() {
             dataPoints={dataPoints}
             activeMethods={activeMethods}
           />
-          {/* <InfoPanel /> */}
+          <InfoPanel />
         </div>
       </div>
     </div>

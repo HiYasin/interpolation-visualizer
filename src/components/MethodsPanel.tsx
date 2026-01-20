@@ -57,7 +57,7 @@ export function MethodsPanel({ dataPoints, activeMethods, onToggleMethod }: Meth
         Interpolation Methods
       </h2>
 
-      <div className="space-y-4">
+      <div className="space-y-2">
         {methods.map((method) => {
           const isActive = activeMethods[method.id];
           const error = dataPoints.length >= 2 
@@ -67,13 +67,13 @@ export function MethodsPanel({ dataPoints, activeMethods, onToggleMethod }: Meth
           return (
             <div
               key={method.id}
-              className={`rounded-lg p-4 transition-all duration-300 ${
+              className={`rounded-lg p-2 transition-all duration-300 ${
                 isActive 
                   ? 'bg-secondary/80 ' + method.glowClass
                   : 'bg-muted/30'
               }`}
             >
-              <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className={`w-3 h-3 rounded-full ${method.colorClass} ${
                     isActive ? 'animate-pulse-subtle' : 'opacity-40'
